@@ -45,7 +45,7 @@ Réponds UNIQUEMENT avec le nom exact de la catégorie, sans explication, sans p
         'X-Title': 'Sunu-Idees'
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-r1:free',
+        model: 'poolside/laguna-m.1:free',
         stream: false,
         messages: [
           { role: 'user', content: prompt }
