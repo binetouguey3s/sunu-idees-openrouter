@@ -1,44 +1,34 @@
-# Sunu-Idees
+# 💡 Sunu-Idées v2 — Cap sur le Cloud
 
-Sunu-Idees est une petite application web de mur d'idees collaboratif pour la promo P9. Elle permet de proposer, afficher, modifier et supprimer des idees directement dans le navigateur.
+Boîte à idées numérique, collaborative et anonyme pour la promo P9 de Simplon.
 
-## Lien du projet deploye et GitHub
-- https://sunu-idees-sandy.vercel.app/ 
+##  Lien déployé
 
-- https://github.com/binetouguey3s/sunu-idees
+https://sunuideeopenrouter.vercel.app/
 
-## Fonctionnalites realisees
+##  Description
+Application web SPA connectée au cloud. Les idées sont catégorisées 
+automatiquement par l'IA d'OpenRouter puis stockées sur Supabase, 
+accessibles par toute la promo en temps réel.
 
-- Creation d'une page HTML avec un en-tete, un formulaire d'ajout et une zone d'affichage des idees.
-- Ajout d'une idee avec un titre, une categorie et une description.
-- Validation du formulaire pour empecher l'ajout d'une idee incomplete.
-- Affichage dynamique des idees sous forme de cartes.
-- Attribution d'une couleur differente selon la categorie :
-  - Pedagogie
-  - Evenement
-  - Vie de campus
-  - Amelioration technique
-- Sauvegarde des idees dans le `localStorage` du navigateur.
-- Recuperation automatique des idees sauvegardees au chargement de la page.
-- Suppression d'une idee avec confirmation.
-- Modification d'une idee directement depuis sa carte.
-- Annulation possible pendant la modification.
-- Mise en page responsive pour une meilleure lecture sur mobile.
-- Ajout du modele poolside/laguna-m.1:free 
-- Le modele sert pour generer une categorie selon le titre et la description données
+##  Fonctionnalités
+- Catégorisation automatique par IA (OpenRouter / Mistral 7B)
+- Stockage cloud en temps réel (Supabase)
+- CRUD complet sans rechargement de page
+- Validation et sanitisation des données
+- Fallback automatique si l'IA est indisponible
+- Indicateur de chargement pendant les appels API
 
-## Structure des fichiers
+##  Technologies
+- HTML5, CSS3, JavaScript ES6+ (async/await)
+- Supabase (base de données cloud)
+- OpenRouter API / Mistral 7B (IA gratuite)
+- Vercel (déploiement + proxy API)
 
-- `index.html` : structure de la page, formulaire et conteneur du mur d'idees.
-- `style.css` : styles de l'application, couleurs, cartes, boutons et responsive.
-- `app.js` : logique JavaScript pour ajouter, afficher, modifier, supprimer et sauvegarder les idees.
-- `README.md` : documentation du projet.
-
-## Utilisation
-
-1. Ouvrir le fichier `index.html` dans un navigateur.
-2. Remplir le formulaire avec le titre, la categorie et la description de l'idee.
-3. Cliquer sur `Poster l'idee`.
-4. Utiliser les boutons `Modifier` ou `Supprimer` sur chaque carte si necessaire.
-
-Les idees restent disponibles apres rechargement de la page grace au stockage local du navigateur.
+## Architecture
+sunu-idees/
+├── api/
+│   └── generate.js   (proxy Vercel → OpenRouter)
+├── index.html
+├── style.css
+└── app.js
