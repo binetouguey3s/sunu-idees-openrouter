@@ -45,7 +45,7 @@ Réponds UNIQUEMENT avec le nom exact de la catégorie, sans explication, sans p
         'X-Title': 'Sunu-Idees'
       },
       body: JSON.stringify({
-        model: 'mistralai/mistral-7b-instruct:free',
+        model: 'meta-llama/llama-3-8b-instruct:free',
         stream: false,
         messages: [
           { role: 'user', content: prompt }
