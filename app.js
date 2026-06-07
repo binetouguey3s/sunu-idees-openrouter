@@ -154,8 +154,8 @@ function creerCarte(idee) {
         <h3>${idee.titre}</h3>
         <p>${idee.description}</p>
         <div class="carte-action">
-            <button class="btn-modifier">✏️ Modifier</button>
-            <button class="btn-supprimer">🗑️ Supprimer</button>
+            <button class="btn-modifier"> Modifier</button>
+            <button class="btn-supprimer"> Supprimer</button>
         </div>
     `;
 
@@ -302,8 +302,8 @@ mur.addEventListener('click', async function(event) {
             <input type="text" class="edit-titre" value="${idee.titre}">
             <textarea class="edit-description">${idee.description}</textarea>
             <div class="carte-action">
-                <button class="btn-sauvegarder">💾 Sauvegarder</button>
-                <button class="btn-annuler">❌ Annuler</button>
+                <button class="btn-sauvegarder"> Sauvegarder</button>
+                <button class="btn-annuler"> Annuler</button>
             </div>
         `;
     }
