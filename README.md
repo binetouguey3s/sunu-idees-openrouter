@@ -22,7 +22,7 @@ accessibles par toute la promo en temps réel.
 ##  Technologies
 - HTML5, CSS3, JavaScript ES6+ (async/await)
 - Supabase (base de données cloud)
-- OpenRouter API / openai/gpt-oss-120b:free (IA)
+- OpenRouter API / poolside/laguna-xs.2:free (IA)
 - Vercel (déploiement + proxy API)
 
 ## Architecture
