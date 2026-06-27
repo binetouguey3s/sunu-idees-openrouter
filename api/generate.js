@@ -45,7 +45,7 @@ Réponds UNIQUEMENT avec le nom exact de la catégorie, sans explication, sans p
         'X-Title': 'Sunu-Idees'
       },
       body: JSON.stringify({
-        model: 'poolside/laguna-xs.2:free',
+        model: process.env.OPENROUTER_MODEL || 'poolside/laguna-xs.2:free',
         stream: false,
         messages: [
           { role: 'user', content: prompt }
