@@ -41,7 +41,7 @@ Réponds UNIQUEMENT avec le nom exact de la catégorie, sans explication, sans p
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`,
-        'HTTP-Referer': 'https://sunu-idees.vercel.app',
+        'HTTP-Referer': 'https://sunuideeopenrouter.vercel.app/',
         'X-Title': 'Sunu-Idees'
       },
       body: JSON.stringify({
